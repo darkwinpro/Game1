@@ -53,7 +53,6 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\NeonShapes\SelfDestroyScript.cs" />
-     <Compile Include="Assets\Scripts\BallController.cs" />
      <Compile Include="Assets\Scripts\CubeSpawner.cs" />
      <Compile Include="Assets\Scripts\Gun.cs" />
      <Compile Include="Assets\Scripts\PathRendering.cs" />
