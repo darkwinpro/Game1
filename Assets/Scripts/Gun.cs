@@ -9,8 +9,12 @@ public class Gun : MonoBehaviour
 
     [SerializeField] 
     private float _power = 10f;
+
+    [SerializeField]
+    private PathRendering _pathRendering;
     
     private Camera mainCamera;
+    
     void Start()
     {
         mainCamera = Camera.main;
@@ -25,6 +29,8 @@ public class Gun : MonoBehaviour
 
         Vector3 _speed = (_mouseInWorld - transform.position) * _power;
         transform.rotation = Quaternion.LookRotation(_speed);
+        
+        _pathRendering.ShowPath(transform.position, _speed);
 
         if (Input.GetMouseButtonDown(0))
         {
