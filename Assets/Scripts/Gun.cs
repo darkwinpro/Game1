@@ -20,7 +20,7 @@ public class Gun : MonoBehaviour
         mainCamera = Camera.main;
     }
     
-    void Update()
+    void LateUpdate()
     {
         float _enter;
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
