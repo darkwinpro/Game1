@@ -21,7 +21,7 @@ public class PathRendering : MonoBehaviour
             float timePath = i * 0.1f;
             points[i] = origin + speed * timePath + Physics.gravity * timePath * timePath / 2f;   //  учесть гравитацию
 
-            if (points[i].y < 1)        //ограничить прорисовку траектории
+            if (points[i].y < 1)        //ограничить прорисовку траектории ниже уровня земли
             {
                 _lineRendererComponent.positionCount = i + 1; //запасная точка
                 break;
