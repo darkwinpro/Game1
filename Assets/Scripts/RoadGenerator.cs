@@ -11,7 +11,7 @@ public class RoadGenerator : MonoBehaviour
     [SerializeField]
     private float _speedPlayer = 0;
     [SerializeField]
-    private byte _maxRoadCount = 5;
+    private byte _maxRoadCount = 7;
 
     private List<GameObject> roads = new List<GameObject>();
 
@@ -20,20 +20,31 @@ public class RoadGenerator : MonoBehaviour
         Vector3 positionRoad = Vector3.zero;
         if (roads.Count > 0)
         {
-            positionRoad = roads[roads.Count - 1].transform.position + new Vector3(0, 0, 15);
+            positionRoad = roads[roads.Count - 1].transform.position + new Vector3(0, 0, 10);
         }
-        GameObject go = Instantiate(_roadPrefab, Vector3.zero, Quaternion.identity);
+        GameObject go = Instantiate(_roadPrefab, positionRoad, Quaternion.identity);
         go.transform.SetParent(transform);
         roads.Add(go);
         
     }
-    public void ResetLevel()
+
+    private void StartLevel()
+    {
+        _speedPlayer = _maxSpeedPlayer;
+    }
+
+    private void ObjectCleaner()
+    {
+        Destroy(roads[0]);          //удаляем сам обьект
+        roads.RemoveAt(0);      //удаляем из списка
+    }
+
+    private void ResetLevel()
     {
         _speedPlayer = 0;
         while (roads.Count > 0)
         {
-            Destroy(roads[0]);          //удаляем сам обьект
-            roads.RemoveAt(0);      //удаляем из списка
+            ObjectCleaner();
         }
 
         for (int i = 0; i < _maxRoadCount; i++)
@@ -43,7 +54,8 @@ public class RoadGenerator : MonoBehaviour
     }
     void Start()
     {
-        
+        ResetLevel();
+        StartLevel();
     }
 
     void Update()
@@ -53,6 +65,12 @@ public class RoadGenerator : MonoBehaviour
         foreach (GameObject road in roads)
         {
             road.transform.position -= new Vector3(0, 0, _speedPlayer * Time.deltaTime);
+        }
+
+        if (roads[0].transform.position.z < -10)
+        {
+            ObjectCleaner();
+            CreateNextRoad();
         }
     }
 }
