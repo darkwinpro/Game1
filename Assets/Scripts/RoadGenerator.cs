@@ -7,11 +7,11 @@ public class RoadGenerator : MonoBehaviour
     [SerializeField]
     private GameObject _roadPrefab;
     [SerializeField]
-    private float _maxSpeedPlayer = 20;
+    private float _maxSpeedPlayer = 4;
     [SerializeField]
     private float _speedPlayer;
     [SerializeField]
-    private byte _maxRoadCount = 7;
+    private byte _maxRoadCount = 20;
 
     private List<GameObject> roads = new List<GameObject>();
 
