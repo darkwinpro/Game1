@@ -28,7 +28,7 @@ public class RoadGenerator : MonoBehaviour
         
     }
 
-    private void StartLevel()
+    public void StartLevel()
     {
         _speedPlayer = _maxSpeedPlayer;
     }
@@ -39,7 +39,7 @@ public class RoadGenerator : MonoBehaviour
         roads.RemoveAt(0);      //удаляем из списка
     }
 
-    private void ResetLevel()
+    public void ResetLevel()
     {
         _speedPlayer = 0;
         while (roads.Count > 0)
@@ -55,7 +55,7 @@ public class RoadGenerator : MonoBehaviour
     void Start()
     {
         ResetLevel();
-        StartLevel();
+        //StartLevel();         //автозапуск
     }
 
     void Update()
