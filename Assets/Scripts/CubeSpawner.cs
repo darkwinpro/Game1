@@ -21,7 +21,7 @@ public class CubeSpawner : MonoBehaviour
     public void SpawnCubes()
     {
         var positionSpawn = new Vector3(brickSpawn.position.x, brickSpawn.position.y, brickSpawn.position.z);
-        Instantiate(_brickPrefab, positionSpawn, Quaternion.identity);
+        Instantiate(_brickPrefab, Vector3.zero, Quaternion.identity, brickSpawn);
     }
    
     void Update()
