@@ -26,6 +26,7 @@ public class RoadGenerator : MonoBehaviour
         go.transform.SetParent(transform);
         roads.Add(go);
         
+
     }
 
     public void StartLevel()
