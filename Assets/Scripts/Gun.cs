@@ -8,7 +8,7 @@ public class Gun : MonoBehaviour
     private GameObject _ballPrefab;
 
     [SerializeField] 
-    private float _power = 8f;
+    private float _power = 10f;
 
     [SerializeField]
     private PathRendering _pathRendering;
@@ -20,7 +20,7 @@ public class Gun : MonoBehaviour
         mainCamera = Camera.main;
     }
     
-    void LateUpdate()
+    void Update()
     {
         float _enter;
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);

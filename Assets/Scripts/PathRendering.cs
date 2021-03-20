@@ -19,7 +19,7 @@ public class PathRendering : MonoBehaviour
         for (int i = 0; i < points.Length; i++)
         {
             float timePath = i * 0.1f;
-            points[i] = origin + speed * timePath + Physics.gravity * timePath * timePath / 2f;   //  учесть гравитацию
+            points[i] = origin + speed * timePath + Physics.gravity * timePath * timePath;  // / 2f;  учесть гравитацию
 
             if (points[i].y < 0)        //ограничить прорисовку траектории ниже уровня земли
             {

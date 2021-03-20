@@ -58,6 +58,8 @@
      <Compile Include="Assets\NeonShapes\SelfDestroyScript.cs" />
      <Compile Include="Assets\Scripts\PathRendering.cs" />
      <Compile Include="Assets\Scripts\Gun.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\HitManager.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.2.3f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
