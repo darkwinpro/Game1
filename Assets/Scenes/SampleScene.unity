@@ -136,9 +136,10 @@ GameObject:
   - component: {fileID: 6479824}
   - component: {fileID: 6479823}
   - component: {fileID: 6479827}
+  - component: {fileID: 6479828}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,7 +152,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6479822}
   m_Material: {fileID: 13400000, guid: 3ba076a552f864ce8bc948223587490f, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -233,8 +234,22 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 1
+--- !u!114 &6479828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6479822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32acd83903cbb4ba1829dd00bcfc3589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rdPlayer: {fileID: 6479827}
+  _playerCollider: {fileID: 6479823}
 --- !u!1 &295624569
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,7 +896,6 @@ GameObject:
   - component: {fileID: 1297875747}
   - component: {fileID: 1297875746}
   - component: {fileID: 1297875748}
-  - component: {fileID: 1297875749}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Untagged
@@ -932,20 +946,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2edc66f6dec34b94a836f118de47a55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1297875749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1297875745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32acd83903cbb4ba1829dd00bcfc3589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rdPlayer: {fileID: 6479827}
-  _playerCollider: {fileID: 6479823}
 --- !u!1 &1810271328
 GameObject:
   m_ObjectHideFlags: 0
