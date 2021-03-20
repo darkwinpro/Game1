@@ -4,28 +4,11 @@ using UnityEngine;
 
 public class HitManager : MonoBehaviour
 {
-    [SerializeField] 
-    private Rigidbody _rdPlayer;
-
-    [SerializeField] 
-    private Collider _playerCollider;
-
     void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.tag == "Cubes")
         {
             Debug.Log("Contact!!");
         }
-    }
-    
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
