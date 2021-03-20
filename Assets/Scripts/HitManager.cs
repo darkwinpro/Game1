@@ -12,7 +12,7 @@ public class HitManager : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (gameObject.tag == "Cubes")
+        if (collision.collider.tag == "Cubes")
         {
             Debug.Log("Contact!!");
         }
