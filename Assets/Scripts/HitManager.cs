@@ -1,14 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HitManager : MonoBehaviour
 {
+    [SerializeField] 
+    private Text _scoreLabel;
+
+    private int _scoreCollectedCoin;
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "Cubes")
+        if (collision.collider.tag == "COIN")
         {
-            Debug.Log("Contact!!");
+            Destroy(collision.collider.gameObject);
+            _scoreCollectedCoin++;
+            _scoreLabel.text = _scoreCollectedCoin.ToString();
+            //Debug.Log("Contact!!");
         }
     }
 }
