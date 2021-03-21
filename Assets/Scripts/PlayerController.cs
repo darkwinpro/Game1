@@ -6,9 +6,9 @@ public class PlayerController : MonoBehaviour
 {
     private Vector3 _targetPosition;
 
-    private float laneOffset = 2.5f;
+    private float laneOffset = 4f;
 
-    private float laneChangeSpeed = 3;
+    private float laneChangeSpeed = 4;
     
     void Start()
     {;
