@@ -16,7 +16,10 @@ public class HitManager : MonoBehaviour
             Destroy(collision.collider.gameObject);
             _scoreCollectedCoin++;
             _scoreLabel.text = _scoreCollectedCoin.ToString();
-            //Debug.Log("Contact!!");
+        }
+        else if (collision.collider.tag == "Cubes")
+        {
+            Debug.Log("Contact!!");
         }
     }
 }
