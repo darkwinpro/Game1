@@ -13,6 +13,9 @@ public class RoadGenerator : MonoBehaviour
     [SerializeField]
     private byte _maxRoadCount = 3;
 
+    [SerializeField]
+    private MainManager _mainManager;
+
     private List<GameObject> roads = new List<GameObject>();
 
     private void CreateNextRoad()
@@ -29,9 +32,10 @@ public class RoadGenerator : MonoBehaviour
 
     }
 
-    public void StartLevel()
+    private void StartLevel()
     {
         _speedPlayer = _maxSpeedPlayer;
+        _mainManager.StartGame();
     }
 
     private void ObjectCleaner()
@@ -40,7 +44,7 @@ public class RoadGenerator : MonoBehaviour
         roads.RemoveAt(0);      //удаляем из списка
     }
 
-    public void ResetLevel()
+    private void ResetLevel()
     {
         _speedPlayer = 0;
         while (roads.Count > 0)

@@ -4,24 +4,13 @@ using UnityEngine;
 
 public class MainManager : MonoBehaviour
 {
-    [SerializeField] 
-    private Gun _gun;
-
+    
     [SerializeField]
-    private  PlayerController _playerController;
-
-    private void StartGame()
+    private  GameObject _playerController;
+    
+    public void StartGame()
     {
-        _playerController.enabled = true;
+        _playerController.SetActive(true);
     }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

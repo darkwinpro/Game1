@@ -1148,8 +1148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62b6b853a03740598d89f9a9db81c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gun: {fileID: 0}
-  _playerController: {fileID: 1297875748}
+  _playerController: {fileID: 1297875745}
 --- !u!1 &1810271328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,6 +1182,7 @@ MonoBehaviour:
   _maxSpeedPlayer: 5
   _speedPlayer: 0
   _maxRoadCount: 7
+  _mainManager: {fileID: 1768789847}
 --- !u!4 &1810271330
 Transform:
   m_ObjectHideFlags: 0
