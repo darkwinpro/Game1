@@ -19,7 +19,6 @@ public class MainManager : MonoBehaviour
 
     public void GameOver()
     {
-        Time.timeScale = 0;
         _gameOverScreen.SetActive(true);
     }
 }
