@@ -8,6 +8,9 @@ public class HitManager : MonoBehaviour
     [SerializeField] 
     private Text _scoreLabel;
 
+    [SerializeField]
+    private MainManager _mainManager;
+
     private int _scoreCollectedCoin;
     void OnCollisionEnter(Collision collision)
     {
@@ -19,7 +22,7 @@ public class HitManager : MonoBehaviour
         }
         else if (collision.collider.tag == "Cubes")
         {
-            Debug.Log("Contact!!");
+            _mainManager.GameOver();
         }
     }
 }

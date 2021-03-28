@@ -55,9 +55,9 @@
      <Compile Include="Assets\Scripts\HitManager.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\RoadGenerator.cs" />
+     <Compile Include="Assets\Scripts\MainManager.cs" />
      <Compile Include="Assets\Scripts\PathRendering.cs" />
      <Compile Include="Assets\Scripts\Gun.cs" />
-     <Compile Include="Assets\Scripts\MainManager.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.2.3f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

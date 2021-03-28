@@ -12,5 +12,9 @@ public class MainManager : MonoBehaviour
     {
         _playerController.SetActive(true);
     }
-    
+
+    public void GameOver()
+    {
+        
+    }
 }
