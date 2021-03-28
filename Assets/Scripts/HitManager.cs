@@ -22,6 +22,7 @@ public class HitManager : MonoBehaviour
         }
         else if (collision.collider.tag == "Cubes")
         {
+            Debug.Log("Collision");
             _mainManager.GameOver();
         }
     }
